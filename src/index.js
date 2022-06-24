@@ -1,9 +1,14 @@
-import { API_KEY } from './api-key';
-import {landingPage} from './landing-page';
+import { displayCard } from './displayCard';
+import { getEquityData } from './getEquityData';
+import {landingPage} from './landingPage';
+import { searchBar } from './searchBar';
 
 
 console.log("Finance App testing");
 
 landingPage();
+searchBar(getEquityData);
+displayCard('Prices will display here:');
 
-console.log(API_KEY)
+
+

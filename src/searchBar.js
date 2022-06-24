@@ -13,7 +13,8 @@ const searchBar = (onClickFunction) => {
     contentDiv.appendChild(searchBarDiv);
 
     searchButton.onclick = () => {
-        onClickFunction(searchBar.value)
+        onClickFunction(searchBar.value);
+       
     }
         
 }
