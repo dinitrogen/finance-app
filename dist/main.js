@@ -1,1 +1,1 @@
-(()=>{"use strict";console.log("Finance App testing"),(()=>{const t=document.querySelector("#content"),e=document.createElement("div");e.setAttribute("class","textDiv"),e.textContent="This is the landing page!",t.appendChild(e)})()})();
+(()=>{"use strict";console.log("Finance App testing"),(()=>{const e=document.querySelector("#content"),t=document.createElement("div");t.setAttribute("class","textDiv"),t.textContent="This is the landing page!",e.appendChild(t)})(),console.log("QCUU9G8OO6THGE3H")})();
