@@ -7,7 +7,7 @@ async function getEquityData(tickerSymbol) {
     // let symbol = "IBM";
     let symbol = tickerSymbol;
     let interval = "1min";
-    let url = `http://www.alphavantage.co/query?function=${func}&symbol=${symbol}&interval=${interval}&apikey=${API_KEY}`;
+    let url = `https://www.alphavantage.co/query?function=${func}&symbol=${symbol}&interval=${interval}&apikey=${API_KEY}`;
 
     let formattedDate = moment().subtract(1, 'days').format('YYYY-MM-DD').toString();
 
