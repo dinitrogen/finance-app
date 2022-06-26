@@ -4,7 +4,7 @@ const landingPage = () => {
 
     const textDiv = document.createElement('div');
     textDiv.setAttribute('class', 'textDiv');
-    textDiv.textContent = "This is the landing page!";
+    textDiv.textContent = "Search for an equity of your choice!";
     contentDiv.appendChild(textDiv);
 };
 

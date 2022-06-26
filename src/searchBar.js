@@ -12,10 +12,22 @@ const searchBar = (onClickFunction) => {
     searchBarDiv.appendChild(searchButton);
     contentDiv.appendChild(searchBarDiv);
 
+    const clearCheckbox = document.createElement('input');
+    clearCheckbox.type = 'checkbox';
+    clearCheckbox.id = 'clearCheckBox'
+    const clearCheckboxLabel = document.createElement('label');
+    clearCheckboxLabel.textContent = 'Clear previous entries?';
+    clearCheckboxLabel.htmlFor = 'clearCheckBox';
+    //clearCheckboxLabel.appendChild(document.createTextNode('Clear'));
+    contentDiv.appendChild(clearCheckbox);
+    contentDiv.appendChild(clearCheckboxLabel);
+
     searchButton.onclick = () => {
-        onClickFunction(searchBar.value);
+        onClickFunction(searchBar.value, clearCheckbox.checked);
        
     }
+
+
         
 }
 

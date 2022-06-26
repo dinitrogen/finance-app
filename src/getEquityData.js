@@ -2,10 +2,10 @@ import moment from "moment";
 import { API_KEY } from "./api-key";
 import { displayCard } from "./displayCard";
 
-async function getEquityData(tickerSymbol) {
+async function getEquityData(tickerSymbol, clearListBoolean) {
     let func = "TIME_SERIES_DAILY";
     // let symbol = "IBM";
-    let symbol = tickerSymbol;
+    let symbol = tickerSymbol.toUpperCase();
     let interval = "1min";
     let url = `https://www.alphavantage.co/query?function=${func}&symbol=${symbol}&interval=${interval}&apikey=${API_KEY}`;
 
@@ -30,10 +30,12 @@ async function getEquityData(tickerSymbol) {
 
         console.log(`Price: $${closePrice} (${percentChange}%)`);
 
-        displayCard(`Price: $${closePrice} (${percentChange}%)`);
+    
+        displayCard(symbol,`Price: $${closePrice} (${percentChange}%)`, clearListBoolean);
     
     } catch(error) {
-        console.log("Invalid query. Try again!");
+        console.log('Error! ' + error);
+        displayCard('Invalid Request! Try again.')
     }
 
     
